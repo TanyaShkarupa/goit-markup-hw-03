@@ -3,7 +3,6 @@ h2,
 h3,
 h4 {
   margin: 0;
-  padding: 0;
 }
 
 p {
@@ -13,25 +12,27 @@ p {
 ul {
   margin: 0;
   list-style: none;
+  padding: 0;
 }
 
 .container {
-  width: 1158px;
+  max-width: 1158px;
+  padding-left: 0;
+  padding-right: 0;
   margin: auto;
-  padding: 0 15px;
-  border: 2px solid transparent;
 }
 
-.header {
-  display: block;
-  width: auto;
-  height: auto;
-  border: 1px solid transparent;
+.sections {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.page-nav {
+  display: flex;
 }
 
 .logo-container {
-  display: inline-block;
-  border: 1px solid transparent;
+  padding: 24px 0;
 }
 
 .logo {
@@ -42,15 +43,18 @@ ul {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
+  text-decoration: none;
 }
 
 .accent {
   color: #2e2f42;
 }
 
-.links-container {
-  display: inline-block;
-  border: 1px solid transparent;
+.link-container {
+  display: flex;
+  padding: 24px 0;
+  margin-left: 76px;
+  gap: 40px;
 }
 
 .links {
@@ -59,6 +63,8 @@ ul {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  padding: 24px 0;
+  text-decoration: none;
 }
 
 .links:hover,
@@ -70,13 +76,10 @@ ul {
   color: #404bbf;
 }
 
-.adress-container {
-  display: inline-block;
-  border: 1px solid transparent;
-}
-
 .address-links {
   font-style: normal;
+  max-width: 1158px;
+  margin-left: auto;
 }
 
 .add-link {
@@ -85,6 +88,14 @@ ul {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  gap: 40px;
+  text-decoration: none;
+}
+
+.header-addr {
+  display: flex;
+  gap: 40px;
+  padding: 24px 0;
 }
 
 .add-link:hover,
@@ -102,16 +113,12 @@ body {
   color: #434455;
 }
 
-.page-title-container {
-  display: block;
-  width: auto;
-  height: 600px;
-  border: 1px solid transparent;
-}
-
 .page-title {
   background-color: #2e2f42;
   color: #ffffff;
+  max-width: 1440px;
+  padding: 188px 0;
+  margin: 0 auto;
 }
 
 .title {
@@ -119,12 +126,8 @@ body {
   line-height: 1.07;
   text-align: center;
   letter-spacing: 0.02em;
-  display: block;
   max-width: 496px;
-  height: 260px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 48px;
+  margin: 0 auto 48px;
 }
 
 .button {
@@ -137,11 +140,11 @@ body {
   letter-spacing: 0.04em;
   cursor: pointer;
   text-align: center;
-  max-width: 169px;
-  height: 56px;
+  display: block;
   margin-left: auto;
   margin-right: auto;
-  display: block;
+  width: 169px;
+  height: 56px;
 }
 
 .button:hover,
@@ -153,16 +156,7 @@ body {
   background-color: #404bbf;
 }
 
-/*.title-none {
-  line-height: 11.1;
-  color: #2e2f42;
-  letter-spacing: 0.02em;
-  font-size: 36px;
-  text-align: center;
-  text-transform: capitalize;
-}*/
-
-.title-none {
+.title2 {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -175,12 +169,9 @@ body {
   overflow: hidden;
 }
 
-.desc-container {
-  display: block;
-  max-width: 264px;
-  height: 104px;
-  border: 1px solid transparent;
-  margin-bottom: 32px;
+.about-us {
+  display: flex;
+  gap: 24px;
 }
 
 .description {
@@ -198,24 +189,20 @@ body {
   letter-spacing: 0.02em;
   font-size: 16px;
 }
-
-.page-section {
+.team-section {
   background-color: #f4f4fd;
 }
 
-.team-card {
-  background-color: #ffffff;
-  border: 1px solid transparent;
-  max-width: 264px;
-  height: auto;
-}
-
-.team-card-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  border: 1px solid transparent;
-  margin-bottom: 32px;
+.team-div {
+  padding-block: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 0 0 4px 4px;
+  box-shadow:
+    0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16),
+    0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  background: #fff;
 }
 
 .section-h {
@@ -225,6 +212,12 @@ body {
   font-size: 36px;
   text-align: center;
   text-transform: capitalize;
+  margin-bottom: 72px;
+}
+
+.our-team {
+  display: flex;
+  justify-content: space-between;
 }
 
 .team {
@@ -240,23 +233,15 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
-  margin-bottom: 8px;
 }
 
-.team-container {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  border: 1px solid transparent;
-  margin-bottom: 32px;
+.portfolio-container {
+  display: flex;
+  /*align-items: stretch;*/
+  flex-wrap: wrap;
+  max-width: 1158px;
+  justify-content: space-between;
 }
-
-/*.portfolio-container {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  border: 1px solid #2e2f42;
-}*/
 
 .portfolio {
   line-height: 1.11;
@@ -265,6 +250,14 @@ body {
   font-size: 36px;
   text-align: center;
   text-transform: capitalize;
+  margin-bottom: 72px;
+}
+
+.portfolio-wrap {
+  border-left: 1px solid #e7e9fc;
+  border-right: 1px solid #e7e9fc;
+  border-bottom: 1px solid #e7e9fc;
+  padding: 32px 16px;
 }
 
 .portfolio-title {
@@ -273,30 +266,7 @@ body {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
-}
-
-.portfolio-img {
-  /*border-width: 360px;*/
-  display: block;
-  /*height: 420px;*/
-  border: 1px solid transparent;
-  margin-bottom: 0;
-}
-
-.port-img-container {
-  width: 360px;
-  display: block;
-  height: 420px;
-  border: 1px solid transparent;
-}
-
-.port-text-container {
-  display: block;
-  border: 1px solid transparent;
-  margin-top: 32px;
-  margin-bottom: 32px;
-  margin-left: 16px;
-  margin-right: 16px;
+  margin-bottom: 8px;
 }
 
 .portfoliop {
@@ -309,23 +279,19 @@ body {
 
 .page-footer {
   background-color: #2e2f42;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
-.footer-container {
-  display: block;
-  width: auto;
-  height: 312px;
-  border: 1px solid transparent;
+.container-footer {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  max-width: 1158px;
+  margin: 0 auto;
 }
 
-.footer-container-sml {
-  display: block;
-  max-width: 264px;
-  height: auto;
-  border: 1px solid transparent;
-  margin-bottom: 32px;
-  margin-top: 100px;
-  margin-bottom: 100px;
+.footer-logo-div {
+  margin-bottom: 16px;
 }
 
 .footerp {
@@ -334,6 +300,8 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
+
+  max-width: 264px;
 }
 
 .logo-m {
@@ -344,9 +312,6 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
-  display: inline-block;
-  border: 1px solid transparent;
-  margin-bottom: 16px;
 }
 .accent-m {
   color: #f4f4fd;
