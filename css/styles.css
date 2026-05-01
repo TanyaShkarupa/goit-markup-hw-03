@@ -20,8 +20,6 @@ img {
 
 .container {
   max-width: 1158px;
-  /*padding-left: 0;
-  padding-right: 0;*/
   padding: 0 15px;
   margin: auto;
 }
@@ -229,11 +227,7 @@ body {
 
 .team-div {
   padding: 32px 0;
-  /* padding-left: 16px;
-  padding-right: 16px;
-  border-radius: 0 0 4px 4px;
-  text-align: center;
-
+  /*
   box-shadow:
     0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16),
@@ -253,7 +247,6 @@ body {
 
 .our-team {
   display: flex;
-  /*justify-content: space-between;*/
   gap: 24px;
 }
 .team-card {
@@ -333,8 +326,6 @@ body {
 
 .page-footer {
   background-color: #2e2f42;
-  /*max-width: 1440px;*/
-  /*margin: 0 auto;*/
   padding: 100px 0;
 }
 
